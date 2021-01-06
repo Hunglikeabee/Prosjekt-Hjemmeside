@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Perfect Dark";
+  src: url("../fonts/pdark.ttf");
+}
+
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  min-height: 100vh;
+  grid-template-rows: 12% 1fr 12%;
+  background-color: black;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Header */
+
+header {
+  box-shadow: 0px 0px 15px 0px white;
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: black;
+}
+
+.logo {
+  max-width: 20vw;
+}
+
+.searchbar {
+  align-items: center;
+}
+
+.input {
+  border-radius: 5px;
+  border: none;
+  border-style: double;
+}
+
+.nav {
+  display: grid;
+  align-self: right;
+  justify-self: right;
+  margin-right: 5%;
+}
+
+li {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menuitems {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  margin-left: 20%;
+  margin-right: 20%;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15vw;
+  justify-content: center;
+}
+
+div {
+
+}
+
+.product1 {
+ max-width: 100%;
+}
+
+/* Footer */
+
+footer {
+  box-shadow: 0px 0px 15px 0px white;
+  display: grid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Perfect Dark";
+  background-color: black;
+  max-height: 114px;
+}
+
+.textfooter {
+  color: #ffbb10;
+  align-self: center;
+  justify-self: center;
+  white-space: nowrap;
+  font-size: 2vw;
+}
+.yellowbar {
+  max-width: 100%;
+  align-self: right;
+  justify-self: right;
+  margin-right: 5%;
+}
+
+/* Media Query's */
+
+@media screen and (min-width: 1920px) {
+  .textfooter {
+    font-size: 40px;
+  }
+}
