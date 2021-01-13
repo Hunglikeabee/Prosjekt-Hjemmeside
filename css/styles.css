@@ -1,4 +1,7 @@
 @font-face {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Britannic";
+  src: url("../fonts/BRITANIC.ttf");
   font-family: "Perfect Dark";
   src: url("../fonts/pdark.ttf");
 }
@@ -15,10 +18,17 @@ footer {
 
 body {
   display: grid;
-  margin: 0;
-  min-height: 100vh;
-  grid-template-rows: 12% 1fr 12%;
+  margin: 0 15%;
+  grid-template-columns: ;
   background-color: black;
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: right 65%;
+  background-position-y: top 30%;
+  background-size: cover;
+  background-size: 125%;
+
   grid-template-areas:
     "header"
     "main"
@@ -34,73 +44,204 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: black;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 9000;
+}
+
+.controllheader {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .logo {
-  max-width: 20vw;
+  max-width: 100%;
+  max-height: 100px;
+  justify-self: left;
 }
 
 .searchbar {
-  align-items: center;
+  display: flex;
+  align-self: center;
+  padding-left: 30px;
 }
 
-.input {
-  border-radius: 5px;
-  border: none;
-  border-style: double;
+nav {
+  display: none;
 }
 
-.nav {
-  display: grid;
-  align-self: right;
-  justify-self: right;
-  margin-right: 5%;
+label {
+  align-self: center;
+  justify-self: center;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+.srcbtn {
+  height: 3vh;
 }
 
 li {
-  max-width: 100%;
-  max-height: 100%;
+  padding-right: 90px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menuitems {
   max-width: 100%;
-  max-height: 100%;
+  min-width: 40px;
 }
 
 /* Main */
 
 main {
   display: grid;
-  margin-left: 20%;
-  margin-right: 20%;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 15vw;
+  grid-template-columns: 25% 25% 25%;
   justify-content: center;
-}
-
-div {
-
+  grid-gap: 3em;
+  margin: 15vh auto;
+  z-index: 10000;
 }
 
 .product1 {
- max-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.product2 {
+  max-width: 100%;
+}
+
+.new {
+  position: absolute;
+  bottom: 3%;
+  left: 15%;
+  font-size: 120%;
+  color: green;
+  font-weight: bold;
+  width: 1px;
+}
+
+.used {
+  position: absolute;
+  bottom: 3%;
+  right: 35%;
+  font-size: 20px;
+  font-weight: bold;
+  width: 1px;
+}
+
+.overlay__farcry {
+  position: fixed;
+  max-width: 300px;
+  max-height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 5px 4px 0px black;
+  display: none;
+}
+
+.overlay__farcry img {
+  max-width: 100%;
+  width: 50%;
+  margin-top: 5%;
+}
+
+.overlay__farcry div {
+  background-color: black;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.overlay__shoppingcart {
+  justify-self: center;
+  z-index: 90010;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  bottom: 10%;
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 0px 0px 2vw 0px black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-area: HER MÅ DET FIKSES NOE SKIKKELIG GREIER FOR Å SETTE OPP DENNA BOKSEN,
+    SKAL BLI SÅ BRA ATTE!;
+}
+
+.text__shoppingcart {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Britannic";
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.form__shipping {
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.form__input {
+  display: block;
+}
+
+legend {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Britannic";
+}
+
+label {
+  color: #000000;
+  font-size: 16px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.checkoutbutton {
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
 }
 
 /* Footer */
 
 footer {
   box-shadow: 0px 0px 15px 0px white;
-  display: grid;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  grid-template-columns: 1fr 1fr;
-  font-family: "Perfect Dark";
   background-color: black;
-  max-height: 114px;
+  z-index: 1000;
+}
+
+.footercontroller {
+  font-family: "Perfect Dark";
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .textfooter {
@@ -108,19 +249,59 @@ footer {
   align-self: center;
   justify-self: center;
   white-space: nowrap;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 .yellowbar {
-  max-width: 100%;
-  align-self: right;
-  justify-self: right;
   margin-right: 5%;
+}
+
+.yellowpic {
+  height: 100%;
+  max-width: 100%;
+}
+
+.buy {
+  position: absolute;
+  left: 64%;
+  bottom: 25%;
+  font-size: 2.5vw;
+  text-decoration: none;
+  padding: 1vw;
+}
+
+.sell {
+  position: relative;
+  left: 45%;
+  bottom: 68%;
+  font-size: 2.5vw;
+  text-decoration: none;
+  padding: 1vw;
+  background-color: white;
+  border-radius: 1vw;
+}
+
+.widow {
+  position: absolute;
+  max-width: 20vw;
+  bottom: 100%;
 }
 
 /* Media Query's */
 
-@media screen and (min-width: 1920px) {
+@media only screen and (min-width: 1920px) {
   .textfooter {
     font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  li {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 751px) {
+  .controllheader label {
+    display: none;
   }
 }

@@ -10,54 +10,96 @@
     </head>
     <body>
         <header class="header">
-            <a href="index.html">
-                <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
-            </a>
-            <div class="searchbar">
-                <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
-                <button class="srcbtn" type="submit" value="GO"></button>
+            <div class="controllheader">
+                <a href="index.html">
+                    <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
+                </a>
+                <div class="searchbar">
+                    <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
+                    <button class="srcbtn" type="submit" value="GO"></button>
+                </div>
+                <label for="hamburger-menu"><i class="fas fa-bars" style="color:white"></i></label>
+                <input type="checkbox" id="hamburger-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="shoppingcart.html" class="shoppingcart">
+                                <img src="images/cart_icon.png" alt="Link to Shoppingcart" class="menuitems">
+                            </a>
+                        </li>
+                        <li>    
+                            <a href="contact.html" class="contact">
+                                <img src="images/contact_icon.png" alt="Link to Contact Information" class="menuitems">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html" class="profile">
+                                <img src="images/profile_icon.png" alt="Link to Profile Page" class="menuitems">
+                            </a>
+                        </li>    
+                    </ul>
+                </nav>
             </div>
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a href="shoppingcart.html" class="shoppingcart">
-                            <img src="images/cart_icon.png" alt="Link to Shoppingcart" class="menuitems">
-                        </a>
-                        <a href="contact.html" class="contact">
-                            <img src="images/contact_icon.png" alt="Link to Contact Information" class="menuitems">
-                        </a>
-                        <a href="profile.html" class="profile">
-                            <img src="images/profile_icon.png" alt="Link to Profile Page" class="menuitems">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </header>
         <main class="main">
             <div class="product1">
-                <img src="images/farcry6.png" alt="">
-                <p class="new">New $19.99</p>
-                <p class="used">Used $13.99</p>
+                <img src="images/farcry6.png" alt="" class="product2">
+                <div class="new">New $19.99</div>
+                <div class="used">Used $13.99</div>             
             </div>
             <div class="product1">
-                <img src="images/farcry6.png" alt="">
+                <img src="images/farcry6.png" alt="" class="product2">
             </div>
             <div class="product1">
-                <img src="images/farcry6.png" alt="">
+                <img src="images/farcry6.png" alt="" class="product2">
             </div>
             <div class="product1">
-                <img src="images/farcry6.png" alt="">
+                <img src="images/farcry6.png" alt="" class="product2">
             </div>
             <div class="product1">
-                <img src="images/farcry6.png" alt="">
+                <img src="images/farcry6.png" alt="" class="product2">
             </div>
             <div class="product1">
+                <img src="images/farcry6.png" alt="" class="product2">
+            </div>
+            <div class="overlay__farcry">
+                <div>
+                    <img src="images/logo.png" alt="">
+                </div>
                 <img src="images/farcry6.png" alt="">
+            </div>
+            <div class="overlay__shoppingcart">
+                <div class="text__shoppingcart">Shoppingcart</div>
+                <form action="form-success.php" method="POST" class="form__shipping">
+                    <div class="form__shipping">
+                        <legend>Shipping Address</legend>
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" id="firstname" class="form__input" required>
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" id="lastname" class="form__input" required>
+                        <label for="address">Address</label>
+                        <input type="text" name="firstname" id="firstname" class="form__input" required>
+                        <label for="phone">Phone number</label>
+                        <input type="tel" name="phone" id="phone" class="form__input">
+                        <label for="email">E-mail address</label>
+                        <input type="email" name="email" id="email" class="form__input" required>
+                    </div>
+                    <input type="submit" value="Checkout" class="checkoutbutton">
+                </form>
+                <div class="items__shoppingcart"></div>
+                <div class="carddetails"></div>
             </div>
         </main>
         <footer class="footer">
-            <p class="textfooter">THE UNIVERSE OF GAMES</p>
-            <img src="images/yellowbar.png" class="yellowbar">
+            <div class="footercontroller">
+                <img src="images/widow.png" alt="Widowmaker" class="widow">
+                <h1 class="textfooter">THE UNIVERSE OF GAMES</h1>
+                <div class="yellowbar">
+                    <img src="images/yellowbar.png" class="yellowpic">
+                    <a href="buy.html" class="buy">BUY</a>
+                    <a href="sell.html" class="sell">SELL</a>
+                </div>
+            </div>  
         </footer>
     </body>
 </html>
