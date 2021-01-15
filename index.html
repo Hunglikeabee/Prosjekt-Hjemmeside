@@ -9,15 +9,15 @@
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="header">
+        <header>
             <div class="controllheader">
                 <a href="index.html">
                     <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
                 </a>
-                <div class="searchbar">
+                <form role="search" class="searchbar">
                     <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
-                    <button class="srcbtn" type="submit" value="GO"></button>
-                </div>
+                    <button class="srcbtn" type="submit" value="GO"><i class="fas fa-search"></i></button>
+                </form>
                 <label for="hamburger-menu"><i class="fas fa-bars" style="color:white"></i></label>
                 <input type="checkbox" id="hamburger-menu">
                 <nav>
@@ -41,26 +41,28 @@
                 </nav>
             </div>
         </header>
-        <main class="main">
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
-                <div class="new">New $19.99</div>
-                <div class="used">Used $13.99</div>             
-            </div>
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
-            </div>
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
-            </div>
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
-            </div>
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
-            </div>
-            <div class="product1">
-                <img src="images/farcry6.png" alt="" class="product2">
+        <main>
+            <div class="main">
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                    <div class="new">New $19.99</div>
+                    <div class="used">Used $13.99</div>             
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.png" alt="" class="product2">
+                </div>
             </div>
             <div class="overlay__farcry">
                 <div>
@@ -68,27 +70,62 @@
                 </div>
                 <img src="images/farcry6.png" alt="">
             </div>
-            <div class="overlay__shoppingcart">
-                <div class="text__shoppingcart">Shoppingcart</div>
-                <form action="form-success.php" method="POST" class="form__shipping">
-                    <div class="form__shipping">
-                        <legend>Shipping Address</legend>
-                        <label for="firstname">First name</label>
-                        <input type="text" name="firstname" id="firstname" class="form__input" required>
-                        <label for="lastname">Last Name</label>
-                        <input type="text" name="lastname" id="lastname" class="form__input" required>
-                        <label for="address">Address</label>
-                        <input type="text" name="firstname" id="firstname" class="form__input" required>
-                        <label for="phone">Phone number</label>
-                        <input type="tel" name="phone" id="phone" class="form__input">
-                        <label for="email">E-mail address</label>
-                        <input type="email" name="email" id="email" class="form__input" required>
+            <form action="form-success.php" method="POST" class="form__shipping">
+                <div class="overlay__shoppingcart">
+                    <div class="text__shoppingcart">Shoppingcart</div>
+                    <div class="items__shoppingcart">
+                        <div class="items__selected">
+                            <img src="images/backpackjunkrat.png" alt="Junkrat Backpack" class="miniitem itemz">
+                            <p class="itemz itemztext" tabindex="0">Junkrat Overwatch Backpack</p>
+                            <label for="quantity" tabindex="0">Quantity</label>
+                            <input type="numeric" name="quantity" id="quantity" maxlength="3" placeholder="1" class="item__quantity itemz">
+                            <input type="submit" value="Update" class="cta-update itemz">
+                        </div>
+                        <div class="items__price" tabindex="0">$19.99</div>
+                        <div class="items__total" tabindex="0">Total $19.99</div>
                     </div>
-                    <input type="submit" value="Checkout" class="checkoutbutton">
-                </form>
-                <div class="items__shoppingcart"></div>
-                <div class="carddetails"></div>
-            </div>
+                    <div class="form__card">
+                        <div>
+                            <label for="cardnumber">Card number</label>
+                            <input type="numeric" name="cardnumber" id="cardnumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" class="form__cardinfo" required>
+                        </div>
+                        <div>
+                            <label for="expirydate">DD</label>
+                            <input type="numeric" name="expirydate" id="expirydate" maxlength="2" placeholder="Day" class="form__cardinfo" required>
+                        </div>
+                        <div>
+                            <label for="expirymonth">MM</label>
+                            <input type="numeric" name="expirymonth" id="expirymonth" maxlength="2" placeholder="Month" class="form__cardinfo" required>
+                        </div>
+                        <div>
+                            <label for="cvc">CVV/CVC</label>
+                            <input type="numeric" name="cvc" id="cvc" maxlength="3" placeholder="xxx" class="form__cardinfo" required>
+                        </div>
+                    </div>
+                    <div class="form__payment">
+                        <label for="visa">Visa</label>
+                        <input type="radio" id="visa" name="payment" value="visa">
+                        <label for="mastercard">Mastercard</label>
+                        <input type="radio" id="mastercard" name="payment" value="mastercard">
+                        <label for="paypal">Paypal</label>
+                        <input type="radio" id="paypal" name="payment" value="mastercard">
+                    </div>
+                    <div class="form__shipping">
+                            <legend>Shipping Address</legend>
+                            <label for="firstname">First name</label>
+                            <input type="text" name="firstname" id="firstname" class="form__input" required>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="lastname" id="lastname" class="form__input" required>
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" class="form__input" required>
+                            <label for="phone">Phone number</label>
+                            <input type="tel" name="phone" id="phone" class="form__input">
+                            <label for="email">E-mail address</label>
+                            <input type="email" name="email" id="email" class="form__input" required>
+                            <input type="submit" value="Checkout" class="checkoutbutton">
+                    </div>
+                </div>
+            </form>
         </main>
         <footer class="footer">
             <div class="footercontroller">
@@ -96,7 +133,8 @@
                 <h1 class="textfooter">THE UNIVERSE OF GAMES</h1>
                 <div class="yellowbar">
                     <img src="images/yellowbar.png" class="yellowpic">
-                    <a href="buy.html" class="buy">BUY</a>
+                    <label for="buybutton" class="buy" tabindex="0">BUY</label>
+                    <input type="checkbox" id="buybutton"></a>
                     <a href="sell.html" class="sell">SELL</a>
                 </div>
             </div>  
