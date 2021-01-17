@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Buy and Sell games easy, fast and cheap">
-        <title>Game Hub | The Universe of Games</title>
+        <meta name="description" content="Create Account | Game Hub | The Universe of Games">
+        <title>Create Account | Game Hub | The Universe of Games</title>
+        <link rel="stylesheet" href="css/createaccount.css">
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
     </head>
@@ -47,29 +48,22 @@
             </div>
         </header>
         <main>
-            <div class="main">
-                <div class="product1">
-                    <a href="product.html">
-                        <img src="images/farcry6.gif" alt="" class="product2">
-                        <div class="new">New $19.99</div>
-                        <div class="used">Used $13.99</div>      
-                    </a>
+            <div class="overlay__whitebox">
+                <div>
+                    <img src="images/logo.png" alt="">
                 </div>
-                <div class="product1">
-                    <img src="images/farcry6.gif" alt="" class="product2">
-                </div>
-                <div class="product1">
-                    <img src="images/farcry6.gif" alt="" class="product2">
-                </div>
-                <div class="product1">
-                    <img src="images/farcry6.gif" alt="" class="product2">
-                </div>
-                <div class="product1">
-                    <img src="images/farcry6.gif" alt="" class="product2">
-                </div>
-                <div class="product1">
-                    <img src="images/farcry6.gif" alt="" class="product2">
-                </div>
+                <form action="form-success.php" method="POST" class="form__account">
+                    <legend>Create New Account</legend>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <label for="email">E-Mail</label>
+                    <input type="text" name="email" id="email" placeholder="E-Mial...">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password...">
+                    <label for="password">Repeat Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password...">
+                    <a href="account.html" class="newacc-cta">Create Account</a>
+                </form>
             </div>
         </main>
         <footer class="footer">

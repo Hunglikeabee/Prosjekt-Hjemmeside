@@ -1,3 +1,5 @@
+@import "variables.css";
+
 @font-face {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   font-family: "Britannic";
@@ -5,32 +7,26 @@
   font-family: "Perfect Dark";
   src: url("../fonts/pdark.ttf");
 }
-header {
-  grid-area: header;
+
+h2 {
+  font-size: 20px;
+  font-family: "Britannic";
 }
-main {
-  grid-area: main;
-}
-footer {
-  grid-area: footer;
+
+div {
+  font-family: Tahoma;
 }
 
 body {
   display: grid;
   margin: 0 15%;
   background-color: black;
-  background-image: url(/images/background.png);
+  background-image: url(/images/background.jpg);
   background-repeat: no-repeat;
-  background-attachment: absolute;
-  background-position-x: right 65%;
-  background-position-y: top 30%;
-  background-size: cover;
+  background-position-x: center;
+  background-position-y: 30%;
   background-size: 125%;
-
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  background-attachment: fixed;
 }
 
 /* Header */
@@ -55,50 +51,90 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   height: 80px;
-  max-height: 10vh;
+  max-height: 60px;
 }
 
 .logo {
-  height: 80px;
+  height: 60px;
   justify-self: left;
   max-height: 10vh;
 }
 
 .searchbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-self: center;
   align-items: center;
   padding-left: 30px;
   height: 25px;
-}
-
-nav {
-  display: none;
+  width: 100px;
+  max-width: 100%;
+  max-height: 5vh;
 }
 
 #hamburger-menu {
   display: none;
 }
 
-#hamburger-menu:checked ~ nav {
-  display: block;
+.hamburgerdropdown {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  text-decoration: none;
+  right: 0px;
+  top: 100%;
+  font-family: Tahoma;
+  font-size: 30px;
+  padding: 5px;
+  z-index: 92392;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.hamburgerdropdown a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.hamburgerdropdown a:hover {
+  background-color: gray;
+}
+
+#hamburger-menu:checked ~ .hamburgerdropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburgericon {
+  position: relative;
+  margin-left: 60%;
+  margin-top: 25px;
+  width: 20px;
+  height: 20px;
+  bottom: 15px;
 }
 
 .input {
+  margin-left: 5%;
+  position: relative;
   border-radius: 5px 0px 0px 5px;
   border-style: none;
   height: 24px;
   max-height: 4vh;
-  max-width: 5vw;
+  max-width: 20vw;
+  width: 300px;
+  bottom: 15px;
 }
 
 .srcbtn {
+  margin-left: 5%;
+  position: relative;
   height: 26px;
   border-radius: 0px 5px 5px 0px;
   border-style: none;
   background-color: #10af10;
   max-height: 5vh;
-  max-width: 5vw;
+  max-width: 100%;
+  bottom: 15px;
 }
 
 li {
@@ -107,12 +143,16 @@ li {
 
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 20% 20% 20%;
+  list-style: none;
 }
 
 .menuitems {
-  width: 40px;
-  height: 40px;
+  position: relative;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  max-height: 100%;
 }
 
 #backgrounddiv {
@@ -121,6 +161,12 @@ ul {
 
 /* Main */
 
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Britannic";
+}
+
 .main {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -128,6 +174,7 @@ ul {
   grid-gap: 20px;
   margin: 20vh auto;
   z-index: 10000;
+  max-width: 700px;
 }
 
 .product1 {
@@ -142,9 +189,10 @@ ul {
 
 .new {
   position: absolute;
-  bottom: 3%;
-  left: 15%;
-  font-size: 20px;
+  font-family: Tahoma;
+  bottom: 8px;
+  left: 10%;
+  font-size: 1.7vw;
   color: green;
   font-weight: bold;
   width: 1px;
@@ -152,229 +200,12 @@ ul {
 
 .used {
   position: absolute;
-  bottom: 3%;
-  right: 35%;
-  font-size: 20px;
+  font-family: Tahoma;
+  bottom: 8px;
+  right: 40%;
+  font-size: 1.7vw;
   font-weight: bold;
   width: 1px;
-}
-
-.overlay__farcry {
-  position: fixed;
-  width: 300px;
-  height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0px 5px 4px 0px black;
-  display: grid;
-}
-
-.overlay__farcry img {
-  max-width: 100%;
-  width: 50%;
-  margin-top: 5%;
-}
-
-.overlay__farcry div {
-  background-color: black;
-  border-radius: 10px 10px 0px 0px;
-  height: 80px;
-}
-
-.text__shoppingcart {
-  grid-area: textcart;
-}
-
-.form__shipping {
-  grid-area: shipping;
-}
-
-.items__shoppingcart {
-  grid-area: itemscart;
-}
-
-.form__card {
-  grid-area: carddetails;
-}
-
-.form__payment {
-  grid-area: payment;
-}
-
-.overlay__shoppingcart {
-  width: 800px;
-  height: 400px;
-  max-width: 90%;
-  max-height: 90%;
-  z-index: 95676;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 5px 5px 15px 5px black;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "textcart shipping"
-    "itemscart shipping"
-    "itemscart shipping"
-    "carddetails shipping"
-    "payment shipping";
-}
-
-.text__shoppingcart {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Britannic";
-  margin-left: 10%;
-  margin-top: 5%;
-}
-
-.items__shoppingcart {
-  display: grid;
-  grid-template-columns: 6fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "selected price"
-    "selected2 total";
-}
-
-.items__selected {
-  display: flex;
-  max-height: 80px;
-  margin-left: 5%;
-  margin-right: 2%;
-  border-style: solid;
-  border-radius: 10px;
-  grid-area: selected;
-  margin-bottom: 10px;
-}
-
-.itemz {
-  flex: 1;
-}
-
-.itemztext {
-  flex: 4;
-  align-self: center;
-}
-
-.item__quantity {
-  max-width: 20px;
-  max-height: 15px;
-  align-self: center;
-  margin: 2%;
-}
-
-.items__selected label {
-  white-space: nowrap;
-  align-self: center;
-  justify-self: center;
-}
-
-.miniitem {
-  max-height: 80px;
-  width: auto;
-}
-
-.cta-update {
-  max-width: 60px;
-  max-height: 40px;
-  align-self: center;
-  margin-right: 10px;
-  color: white;
-  background-color: #4343f9;
-  border-style: solid;
-  border-color: black;
-  border-radius: 10px;
-}
-
-.items__price {
-  grid-area: price;
-  max-height: 80px;
-  margin-left: 5%;
-  margin-right: 2%;
-  border-style: solid;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-.items__total {
-  grid-area: total;
-  max-height: 80px;
-  margin-left: 5%;
-  margin-right: 2%;
-  border-style: solid;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-right: 10px;
-}
-
-.form__card {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-
-.form__cardinfo {
-  width: 80%;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px 1px black;
-}
-
-.form__payment {
-  margin-left: 5%;
-}
-
-.form__shipping {
-  justify-self: center;
-  align-self: center;
-}
-
-.form__input {
-  display: block;
-  width: 90%;
-  border-radius: 5px;
-  border-style: solid black;
-  box-shadow: 1px 1px 2px 1px black;
-}
-
-legend {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Britannic";
-}
-
-.form__shipping label {
-  color: #000000;
-  font-size: 12px;
-  font-family: Tahoma;
-  font-weight: bold;
-}
-
-.checkoutbutton {
-  color: white;
-  background-color: green;
-  border-radius: 10px;
-  border: solid black 1px;
-  box-shadow: 1px 1px 2px 1px black;
-  font-size: 20px;
-  padding: 5% 10% 5% 10%;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 /* Footer */
@@ -392,7 +223,7 @@ footer {
 }
 
 .footercontroller {
-  font-family: "Perfect Dark";
+  font-family: var(--h1font);
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -422,8 +253,8 @@ footer {
 }
 
 .buy {
+  font-family: var(--h1font);
   position: absolute;
-  font-family: "Perfect Dark";
   font-size: 20px;
   left: 25%;
   top: 18%;
@@ -435,8 +266,8 @@ footer {
 }
 
 .sell {
+  font-family: var(--h1font);
   position: absolute;
-  font-family: "Perfect Dark";
   font-size: 20px;
   left: 55%;
   top: 18%;
@@ -452,29 +283,44 @@ footer {
   max-width: 15vw;
   bottom: 100%;
   left: 0%;
-}
-
-.buy:hover {
-  cursor: pointer;
-}
-
-#buybutton,
-.overlay__shoppingcart {
-  display: none;
-}
-
-#buybutton:checked ~ .overlay__shoppingcart {
-  display: grid;
+  z-index: 1;
 }
 
 /* Media Query's */
 
-@media only screen and (min-width: 1920px) {
-  .textfooter {
+@media only screen and (min-width: 661px) {
+  .controllheader label {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
+  .yellowpic {
+    display: none;
+  }
+
+  .buy {
+    width: 60px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+  .sell {
+    width: 60px;
+    padding: 5px;
+    margin-left: 100px;
+    margin-top: 15px;
+  }
+
   ul {
     display: none;
   }
@@ -483,57 +329,31 @@ footer {
     justify-self: center;
     bottom: 15px;
   }
-  .overlay__shoppingcart {
-    height: 70%;
-    width: 800px;
-    max-width: 90%;
-    max-height: 85%;
-    z-index: 95676;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 5px 5px 15px 5px black;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "textcart"
-      "itemscart"
-      "carddetails"
-      "payment"
-      "shipping";
-  }
+}
 
-  .items__shoppingcart {
-    display: grid;
-    grid-template-columns: 75% 20%;
-    grid-template-rows: 1fr 30%;
-    grid-template-areas:
-      "selected price"
-      "selected2 total";
-  }
-  .items__selected label {
+@media only screen and (max-height: 600px) {
+  .yellowpic {
     display: none;
   }
-
-  .form__shipping {
-    margin-left: 20px;
-    margin-bottom: 5px;
-    justify-self: left;
+  .buy {
+    position: relative;
+    top: 10px;
+    left: 50px;
   }
-  .checkoutbutton {
-    position: absolute;
-    left: 48%;
-    width: 130px;
-    padding: 5px;
-    bottom: 30px;
+
+  .sell {
+    position: relative;
+    top: 10px;
+    left: 80px;
   }
 }
 
-@media only screen and (min-width: 601px) {
-  .controllheader label {
-    display: none;
+@media only screen and (min-width: 1000px) {
+  .new {
+    font-size: 20px;
+  }
+
+  .used {
+    font-size: 20px;
   }
 }
