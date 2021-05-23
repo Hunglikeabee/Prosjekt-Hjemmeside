@@ -6,7 +6,6 @@
         <meta name="description" content="Buy and Sell games easy, fast and cheap">
         <title>Game Hub | The Universe of Games</title>
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/index.css">
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
                 <!-- Hotjar Tracking Code for https://sleepy-heyrovsky-07d0b1.netlify.app/ -->
         <script>
@@ -22,15 +21,22 @@
     </head>
     <body>
         <header>
-            <section class="header__main">
-                <a class="logo" href="index.html">
-                    <!-- <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page"> -->
+            <div class="controllheader">
+                <a href="index.html">
+                    <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
                 </a>
-                <form action="search.html" role="search" class="search__container">
-                    <input type="text" class="search__input" placeholder="Search..." alt="Search bar, enter your query">
-                    <button aria-label="Search Button" class="search__button" type="submit" value="GO"><i class="fas fa-search"></i></button>
+                <form action="search.html" role="search" class="searchbar">
+                    <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
+                    <button aria-label="Search Button" class="srcbtn" type="submit" value="GO"><i class="fas fa-search"></i></button>
                 </form>
-                <nav class="nav__main">
+                <label for="hamburger-menu" tabindex="0"><i class="fas fa-bars hamburgericon" style="color:white"></i></label>
+                <input type="checkbox" id="hamburger-menu">
+                <div class="hamburgerdropdown">
+                    <a href="account.html">Profile</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="shoppingcart.html">Shoppingcart</a>
+                </div>
+                <nav>
                     <ul>
                         <li>
                             <a href="shoppingcart.html" class="shoppingcart">
@@ -49,30 +55,32 @@
                         </li>    
                     </ul>
                 </nav>
-            </section>
-            <section class="header__sub">
-                <nav class="nav__sub">
-                    <ul>
-                        <a href="games.html">Games</a>
-                        <a href="sell.html">Sell Games</a>
-                        <a href="clothes.html">Clothes</a>
-                        <a href="gadgets.html">Gadgets</a>
-                        <a href="collectibles.html">Collectibles</a>
-                    </ul>
-                </nav>
-            </section>
+            </div>
         </header>
         <main>
-            <div class="overlay__whitebox">
-                <div class="logoheader">
-                    <img src="images/logo.png" alt="Gamhub Logo">
+            <div class="main">
+                <div class="product1">
+                    <a href="product.html">
+                        <img src="images/farcry6.gif" alt="" class="product2">
+                        <div class="new">New $19.99</div>
+                        <div class="used">Used $13.99</div>      
+                    </a>
                 </div>
-                <h1>Success!</h1>
-                <h2>Your order has been recieved</h2>
-                <p>We will ship your order within the next few days.
-                   Login to your profile to see shippment status.
-                   Thank you!
-                </p>
+                <div class="product1">
+                    <img src="images/farcry6.gif" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.gif" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.gif" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.gif" alt="" class="product2">
+                </div>
+                <div class="product1">
+                    <img src="images/farcry6.gif" alt="" class="product2">
+                </div>
             </div>
         </main>
         <footer class="footer">

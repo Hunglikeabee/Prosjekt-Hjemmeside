@@ -1,75 +1,132 @@
 .overlay__whitebox {
-    position: fixed;
-    max-width: 80%;
-    max-height: 80%;
-    width: 450px;
-    height: 600px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 5px 4px 0px black;
-    display: grid;
-}
-  
-.overlay__whitebox img {
-    max-width: 100%;
-    margin-top: 0%;
-    height: 80px;
-}
-  
-.overlay__whitebox div {
-    background-color: black;
-    border-radius: 10px 10px 0px 0px;
-    height: 80px;
+  position: fixed;
+  max-width: 80%;
+  max-height: 80%;
+  width: 450px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--borderradius1);
+  background-color: white;
+  box-shadow: 0px 5px 4px 0px black;
+  display: grid;
 }
 
-  
+.overlay__whitebox img {
+  max-width: 100%;
+  margin-top: 0%;
+  height: 80px;
+}
+
+.overlay__whitebox div {
+  background-color: black;
+  border-radius: 10px 10px 0px 0px;
+  height: 80px;
+}
+
 .form__account {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
 }
 
 legend {
-    text-align: center;
-    margin-bottom: 20%;
-    margin-top: 20%;
+  text-align: center;
+  margin-bottom: 20%;
+  margin-top: 20%;
 }
 
 label {
-   margin-left: 14%;
+  margin-left: 14%;
 }
 
 .form_account input {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #username {
-    margin: auto;
-    margin-bottom: 10px;
-    width: 200px;
-    border-radius: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 #email {
-    margin: auto;
-    margin-bottom: 10px;
-    width: 200px;
-    border-radius: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 #password {
-    margin: auto;
-    margin-bottom: 10px;
-    width: 200px;
-    border-radius: 5px;
-
+  margin: auto;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 .newacc-cta {
+  margin: auto;
+  width: 60%;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 5px;
+  border-style: none;
+  padding: 8px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 30%;
+}
+
+@media only screen and (max-height: 600px) {
+  .overlay__whitebox {
+    width: 500px;
+    height: 300px;
+  }
+
+  .overlay__whitebox img {
+    max-width: 60%;
+    margin-top: 0%;
+    height: 50px;
+  }
+
+  .overlay__whitebox div {
+    background-color: black;
+    border-radius: 10px 10px 0px 0px;
+    height: 50px;
+  }
+
+  legend {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  #username {
+    margin: auto;
+    margin-bottom: 1px;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  #email {
+    margin: auto;
+    margin-bottom: 1px;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  #password {
+    margin: auto;
+    margin-bottom: 1px;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .newacc-cta {
     margin: auto;
     width: 60%;
     background-color: var(--green);
@@ -80,66 +137,5 @@ label {
     margin-bottom: 5px;
     text-decoration: none;
     text-align: center;
-    margin-bottom: 30%;
-
-}
-
-@media only screen and (max-height: 600px) {
-    .overlay__whitebox {
-        width: 500px;
-        height: 300px;
-    }
-      
-  .overlay__whitebox img {
-    max-width: 60%;
-    margin-top: 0%;
-    height: 50px;
   }
-  
-  .overlay__whitebox div {
-    background-color: black;
-    border-radius: 10px 10px 0px 0px;
-    height: 50px;
-    }
-
-    legend {
-        text-align: center;
-        margin-bottom: 5%;
-            margin-top: 5%;
-    }
-    
-    #username {
-        margin: auto;
-        margin-bottom: 1px;
-        width: 200px;
-        border-radius: 5px;
-    }
-    
-    #email {
-        margin: auto;
-        margin-bottom: 1px;
-        width: 200px;
-        border-radius: 5px;
-    }
-    
-    #password {
-        margin: auto;
-        margin-bottom: 1px;
-        width: 200px;
-        border-radius: 5px;   
-    }
-    
-    .newacc-cta {
-        margin: auto;
-        width: 60%;
-        background-color: var(--green);
-        color: var(--white);
-        border-radius: 5px;
-        border-style: none;
-        padding: 8px;
-        margin-bottom: 5px;
-        text-decoration: none;
-        text-align: center;    
-    }
-
 }

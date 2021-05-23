@@ -1,0 +1,15 @@
+:root {
+    --white: #ffffff;
+    --black: #1d1c1c;
+    --orange: #ffbb10;
+    --blue: #3cabff;
+    --gray: #414141;
+    --red: #f13d3d;
+    --green: #4ee641;
+
+    --fontdefault: Tahoma, Arial, Helvetica, sans-serif;
+    --font1: "Britanic", Arial, Helvetica, sans-serif;
+    --font2: "Perfectdark", Arial, Helvetica, sans-serif;
+
+    --borderradius1: 10px;
+}

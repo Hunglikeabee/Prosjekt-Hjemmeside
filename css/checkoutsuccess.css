@@ -8,7 +8,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: var(--borderradius1);
   background-color: white;
   box-shadow: 0px 5px 4px 0px black;
   display: grid;
@@ -48,4 +48,3 @@
 .overlay__whitebox p {
   margin: 0% 20% 40% 20%;
 }
-

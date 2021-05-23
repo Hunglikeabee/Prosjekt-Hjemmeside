@@ -1,244 +1,35 @@
-.text__shoppingcart {
-    grid-area: textcart;
-  }
-  
-  .form__shipping {
-    grid-area: shipping;
-  }
-  
-  .items__shoppingcart {
-    grid-area: itemscart;
-  }
-  
-  .form__card {
-    grid-area: carddetails;
-  }
-  
-  .form__payment {
-    grid-area: payment;
-  }
-  
-  .overlay__shoppingcart {
-    width: 800px;
-    height: 400px;
-    max-width: 90%;
-    max-height: 90%;
-    z-index: 95676;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 5px 5px 15px 5px black;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "textcart shipping"
-      "itemscart shipping"
-      "itemscart shipping"
-      "carddetails shipping"
-      "payment shipping";
-  }
-  
-  .text__shoppingcart {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Britannic";
-    margin-left: 10%;
-    margin-top: 5%;
-  }
-  
-  .items__shoppingcart {
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "selected price"
-      "selected2 total";
-  }
-  
-  .items__selected {
-    display: flex;
-    max-height: 80px;
-    margin-left: 5%;
-    margin-right: 2%;
-    border-style: solid;
-    border-radius: 10px;
-    grid-area: selected;
-    margin-bottom: 10px;
-  }
-  
-  .itemz {
-    flex: 1;
-  }
-  
-  .itemztext {
-    flex: 4;
-    align-self: center;
-  }
-  
-  .item__quantity {
-    max-width: 20px;
-    max-height: 15px;
-    align-self: center;
-    margin: 2%;
-  }
-  
-  .items__selected label {
-    white-space: nowrap;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  .miniitem {
-    max-height: 80px;
-    width: auto;
-  }
-  
-  .cta-update {
-    max-width: 60px;
-    max-height: 40px;
-    align-self: center;
-    margin-right: 10px;
-    color: white;
-    background-color: #4343f9;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-  }
-  
-  .items__price {
-    grid-area: price;
-    max-height: 80px;
-    margin-left: 5%;
-    margin-right: 2%;
-    border-style: solid;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-  }
-  
-  .items__total {
-    grid-area: total;
-    max-height: 80px;
-    margin-left: 5%;
-    margin-right: 2%;
-    border-style: solid;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-right: 10px;
-  }
-  
-  .form__card {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-  
-  .form__cardinfo {
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px 1px black;
-  }
-  
-  .form__payment {
-    margin-left: 5%;
-  }
-  
-  .form__shipping {
-    justify-self: center;
-    align-self: center;
-  }
-  
-  .form__input {
-    display: block;
-    width: 90%;
-    border-radius: 5px;
-    border-style: solid black;
-    box-shadow: 1px 1px 2px 1px black;
-  }
-  
-  
-  .form__shipping label {
-    color: #000000;
-    font-size: 12px;
-    font-family: Tahoma;
-    font-weight: bold;
-  }
-  
-  .checkoutbutton {
-    color: white;
-    background-color: green;
-    border-radius: 10px;
-    border: solid black 1px;
-    box-shadow: 1px 1px 2px 1px black;
-    font-size: 20px;
-    padding: 5px 10px;
-    margin-left: 115%;
-    margin-bottom: 5%;
-    text-decoration: none;
-  }
+.cart-page {
+  max-width: 800px;
+  margin: 50px auto;
+  display: grid;
+}
 
-@media only screen and (max-width: 600px) {
+.product {
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
 
-  .overlay__shoppingcart {
-    height: 70%;
-    width: 800px;
-    max-width: 90%;
-    max-height: 85%;
-    z-index: 95676;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 30px;
-    display: grid;
-    box-shadow: 5px 5px 15px 5px black;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "textcart"
-      "itemscart"
-      "carddetails"
-      "payment"
-      "shipping";
-  }
+.product-name {
+  height: 70px;
+  font-size: 16px;
+}
 
-  .items__shoppingcart {
-    display: grid;
-    grid-template-columns: 75% 20%;
-    grid-template-rows: 1fr 30%;
-    grid-template-areas:
-      "selected price"
-      "selected2 total";
-  }
-  .items__selected label {
-    display: none;
-  }
+.product-image {
+  background-size: cover;
+  height: 300px;
 
-  .form__shipping {
-    margin-left: 20px;
-    margin-bottom: 5px;
-    justify-self: left;
-  }
-  .checkoutbutton {
-    position: absolute;
-    left: 48%;
-    width: 130px;
-    padding: 5px 5px;
-    bottom: 30px;
-    margin-left: 5%;
-    margin-bottom: -5%;
-    text-decoration: none;
-    text-align: center;
-  }
+}
 
+.total {
+
+}
+
+.product-button {
+  margin: auto;
+  background-color: var(--green);
+  border: none;
+  border-radius: var(--borderradius1);
+  height: 25px;
+  cursor: pointer;
 }

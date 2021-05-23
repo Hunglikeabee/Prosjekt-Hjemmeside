@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Search result | Game Hub | The Universe of Games">
-        <title>Search result | Game Hub | The Universe of Games</title>
-        <link rel="stylesheet" href="css/search.css">
+        <meta name="description" content="Buy and Sell games easy, fast and cheap">
+        <title>Game Hub | The Universe of Games</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/index.css">
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
                 <!-- Hotjar Tracking Code for https://sleepy-heyrovsky-07d0b1.netlify.app/ -->
         <script>
@@ -22,41 +22,45 @@
     </head>
     <body>
         <header>
-            <div class="controllheader">
-                <a href="index.html">
-                    <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
+            <section class="header__main">
+                <a class="logo" href="index.html">
+                    <!-- <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page"> -->
                 </a>
-                <form action="search.html" role="search" class="searchbar">
-                    <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
-                    <button aria-label="Search Button" class="srcbtn" type="submit" value="GO"><i class="fas fa-search"></i></button>
+                <form action="search.html" role="search" class="search__container">
+                    <input type="text" class="search__input" placeholder="Search..." alt="Search bar, enter your query">
+                    <button aria-label="Search Button" class="search__button" type="submit" value="GO"><i class="fas fa-search"></i></button>
                 </form>
-                <label for="hamburger-menu" tabindex="0"><i class="fas fa-bars hamburgericon" style="color:white"></i></label>
-                <input type="checkbox" id="hamburger-menu">
-                <div class="hamburgerdropdown">
-                    <a href="account.html">Profile</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="shoppingcart.html">Shoppingcart</a>
-                </div>
-                <nav>
+                <nav class="nav__main">
                     <ul>
                         <li>
                             <a href="shoppingcart.html" class="shoppingcart">
-                                <img src="images/cart_icon.png" alt="Link to Shoppingcart" class="menuitems">
+                                <i style="color:white;" class="fas fa-shopping-cart menuitems"></i>
                             </a>
                         </li>
                         <li>    
                             <a href="contact.html" class="contact">
-                                <img src="images/contact_icon.png" alt="Link to Contact Information" class="menuitems">
+                                <i style="color:white;" class="far fa-envelope menuitems"></i>
                             </a>
                         </li>
                         <li>
                             <a href="account.html" class="profile">
-                                <img src="images/profile_icon.png" alt="Link to Profile Page" class="menuitems">
+                                <i style="color:white;" class="far fa-user-circle menuitems"></i>
                             </a>
                         </li>    
                     </ul>
                 </nav>
-            </div>
+            </section>
+            <section class="header__sub">
+                <nav class="nav__sub">
+                    <ul>
+                        <a href="games.html">Games</a>
+                        <a href="sell.html">Sell Games</a>
+                        <a href="clothes.html">Clothes</a>
+                        <a href="gadgets.html">Gadgets</a>
+                        <a href="collectibles.html">Collectibles</a>
+                    </ul>
+                </nav>
+            </section>
         </header>
         <main>
             <div class="overlay__whitebox">

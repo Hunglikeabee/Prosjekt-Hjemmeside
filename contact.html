@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Checkout Page | Game Hub | The Universe of Games">
-        <title>Checkout Page | Game Hub | The Universe of Games</title>
-        <link rel="stylesheet" href="css/contact.css">
+        <meta name="description" content="Buy and Sell games easy, fast and cheap">
+        <title>Game Hub | The Universe of Games</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/contact.css">
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
                 <!-- Hotjar Tracking Code for https://sleepy-heyrovsky-07d0b1.netlify.app/ -->
         <script>
@@ -22,70 +23,73 @@
     </head>
     <body>
         <header>
-            <div class="controllheader">
-                <a href="index.html">
-                    <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page">
+            <section class="header__main">
+                <a class="logo" href="index.html">
+                    <!-- <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page"> -->
                 </a>
-                <form action="search.html" role="search" class="searchbar">
-                    <input type="text" class="input" placeholder="Search..." alt="Search bar, enter your query">
-                    <button aria-label="Search Button" class="srcbtn" type="submit" value="GO"><i class="fas fa-search"></i></button>
+                <form action="search.html" role="search" class="search__container">
+                    <input type="text" class="search__input" placeholder="Search..." alt="Search bar, enter your query">
+                    <button aria-label="Search Button" class="search__button" type="submit" value="GO"><i class="fas fa-search"></i></button>
                 </form>
-                <label for="hamburger-menu" tabindex="0"><i class="fas fa-bars hamburgericon" style="color:white"></i></label>
-                <input type="checkbox" id="hamburger-menu">
-                <div class="hamburgerdropdown">
-                    <a href="account.html">Profile</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="shoppingcart.html">Shoppingcart</a>
-                </div>
-                <nav>
+                <nav class="nav__main">
                     <ul>
                         <li>
                             <a href="shoppingcart.html" class="shoppingcart">
-                                <img src="images/cart_icon.png" alt="Link to Shoppingcart" class="menuitems">
+                                <i style="color:white;" class="fas fa-shopping-cart menuitems"></i>
                             </a>
                         </li>
                         <li>    
                             <a href="contact.html" class="contact">
-                                <img src="images/contact_icon.png" alt="Link to Contact Information" class="menuitems">
+                                <i style="color:white;" class="far fa-envelope menuitems"></i>
                             </a>
                         </li>
                         <li>
                             <a href="account.html" class="profile">
-                                <img src="images/profile_icon.png" alt="Link to Profile Page" class="menuitems">
+                                <i style="color:white;" class="far fa-user-circle menuitems"></i>
                             </a>
                         </li>    
                     </ul>
                 </nav>
-            </div>
+            </section>
+            <section class="header__sub">
+                <nav class="nav__sub">
+                    <ul>
+                        <a href="games.html">Games</a>
+                        <a href="sell.html">Sell Games</a>
+                        <a href="clothes.html">Clothes</a>
+                        <a href="gadgets.html">Gadgets</a>
+                        <a href="collectibles.html">Collectibles</a>
+                    </ul>
+                </nav>
+            </section>
         </header>
-        <main class="contactinfo">
-            <h1>Contact Us!</h1>
-            <h2 class="h21contact">Visit Our Store
-                <p>192 On top of the blimp</p>
-                <p>2414 Orgrimmar</p>
-            </h2>
-            <h2 class="h22contact">Email
-                <p>mail@gamehub.com</p>
-            </h2>
-            <h2 class="h23contact">Phone
-                <p>+4712332213</p>
-            </h2>
-            <h2 class="h24contact">Open
-                <p>Mon-Fri   08:00 - 16:00</p>
-                <p>Saturday  10:00 - 15:00</p>
-                <p>Sunday Closed</p>
-            </h2>
+        <main>
+            <section class="contact__container">
+                <form method="POST" class="contact-form" id="contact-form">
+                    <h1>Send us a message</h1>
+                    <label for="fullname">Name</label>
+                    <input type="text" name="fullname" id="contact__form-fullname" required>
+                    <p class="fullname-error">Name is too short</p>
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" name="phonenumber" id="contact__form-phonenumber">
+                    <p class="phonenumber-error">Invalid number</p>
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="contact__form-email">
+                    <p class="email-error">Invalid e-mail address</p>
+                    <textarea name="textarea" id="contact__form-textarea" cols="30" rows="10" maxlength="200"></textarea>
+                    <p class="textarea-error"></p>
+                    <div class="contact__form-message"></div>
+                    <button disabled class="contact__form-button">Send</button>
+                </form>
+                <div class="contact__information">
+                    <h1>Contact us at:</h1>
+                </div>
+            </section>
         </main>
         <footer class="footer">
-            <div class="footercontroller">
-                <img src="images/widow.png" alt="Widowmaker" class="widow">
-                <h1 class="textfooter">THE UNIVERSE OF GAMES</h1>
-                <div class="yellowbar">
-                    <img src="images/yellowbar.png" class="yellowpic">
-                    <a href="games.html" class="buy">BUY</a>
-                    <a href="sell.html" class="sell">SELL</a>
-                </div>
-            </div>  
+
         </footer>
+        <script src="js/script.js"></script>
+        <script src="js/contact.js"></script>
     </body>
 </html>
