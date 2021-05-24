@@ -34,11 +34,13 @@ header {
 
 /* Top part of the navigation*/
 
+
+
+
 .header__main {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   max-width: 1000px;
-  height: 60px;
   margin: 10px auto;
 }
 
@@ -130,4 +132,40 @@ header {
 .nav__sub a:nth-child(odd) {
   background-color: var(--orange);
   color: black;
+}
+
+@media only screen and (max-width: 650px) {
+
+  .logo {
+    grid-area: thelogo;
+  }
+
+  .search__container {
+    grid-area: thesearchbar;
+    margin: 0px 10px;
+  }
+
+  .nav__main {
+    grid-area: thenav;
+  }
+
+  .header__main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "thelogo thenav"
+    "thesearchbar thesearchbar";
+  }
+
+  .logo {
+    min-width: 100px;
+  }
+
+  .nav__main ul {
+    padding: 0px;
+  }
+
+  .nav__sub ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
