@@ -28,14 +28,11 @@ li {
   list-style: none;
 }
 
+/* Top part of the navigation*/
+
 header {
   display: grid;
 }
-
-/* Top part of the navigation*/
-
-
-
 
 .header__main {
   display: grid;
@@ -77,14 +74,15 @@ header {
 .search__input {
   background-color: var(--black);
   color: var(--white);
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: var(--borderradius1);
+  padding: 5px;
 }
 
 .search__button {
   background-color: var(--orange);
   color: var(--white);
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: var(--borderradius1);
   margin-left: 10px;
   width: 40px;

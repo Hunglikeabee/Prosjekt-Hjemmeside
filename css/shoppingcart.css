@@ -4,21 +4,19 @@
   display: grid;
 }
 
-.product {
-  width: 230px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+.cart-item {
+  margin: 20px;
 }
 
-.product-name {
-  height: 70px;
-  font-size: 16px;
+.cart-item:nth-child(odd) {
+  background-color: var(--gray);
 }
 
-.product-image {
-  background-size: cover;
-  height: 300px;
-
+.cart-image {
+  width: 100px;
+  height: 150px;
+  background-size: contain;
+  margin: 10px;
 }
 
 .total {

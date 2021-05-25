@@ -1,23 +1,26 @@
 import { allProducts } from "./products/productList.js";
-const gamesContainer = document.querySelector(".games__container");
+const gameDetails  = document.querySelector(".game-details");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".cart-total");
 let cartArray = [];
 
+const getParameter = document.location.search;
+const params = new URLSearchParams(getParameter);
+const game = params.get("game");
 
-allProducts.forEach(function(product) {
+if (game === null) {
+    location.href = "/index.html";
+};
 
-    gamesContainer.innerHTML += `   <div class="product">
-                                        <a href="details.html?game=${product.id}" class="game${product.id}">
-                                            <h2 class="product-name">${product.name}</h2>
-                                            <div style="background-image: url(${product.image})" class="product-image"></div>
-                                            <div class="product-price">${product.price} NOK</div>
-                                        </a>
-                                        <button class="product-button" data-product="${product.id}">Add to cart</button>
-                                    </div>
-                                `
-});
+document.title = `${allProducts[game].name}`
+
+gameDetails.innerHTML = `<h2>${allProducts[game].name}</h2>
+                         <div style="background-image: url(${allProducts[game].image})" class="product-image"></div>
+                         <p>${allProducts[game].description}</p>
+                         <div class="product-price">${allProducts[game].price} NOK</div>
+                        <button class="product-button" data-product="${allProducts[game].id}">Add to cart</button>
+                        `
 
 
 const buttons = document.querySelectorAll("button");
@@ -34,18 +37,8 @@ function showCart(cartItems) {
     cart.style.display = "block";
     cartList.innerHTML = "";
     let total = 0;
-
-
     cartItems.forEach(function(cartElement) {
         total += cartElement.price;
-
-        // console.log(cartItems)
-
-        // if (cartItems.id.includes(cartElement.id)) {
-        //     console.log(cartItems)
-        //     console.log("true")
-        // }
-
         cartList.innerHTML += `
                                 <div class="cart-item">
                                     <a href="details.html?game=${cartElement.id}">
@@ -55,6 +48,5 @@ function showCart(cartItems) {
                                 </div>
                               `
     });
-    const decimalFix = parseFloat(`${total}`).toFixed(2);
-    totalContainer.innerHTML = `Total: ${decimalFix}NOK`;
+    totalContainer.innerHTML = `Total: ${total}NOK`;
 };

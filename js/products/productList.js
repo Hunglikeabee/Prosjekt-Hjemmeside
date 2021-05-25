@@ -1,7 +1,7 @@
 export const allProducts =  [
     {
         name: "FarCry6",
-        id: "1",
+        id: "0",
         price: 29.99,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw7387f247/images/large/5ecd2c925cdf9a1528a8c1d1.jpg?sw=341&sh=450&sm=fit",
         platform: "pc",
@@ -18,7 +18,7 @@ export const allProducts =  [
     },
     {
         name: "Scott Pilgrim vs. The World: The Game",
-        id: "2",
+        id: "1",
         price: 9.00,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw6c73d84c/images/large/5f4683875cdf9a0c2027ca80.jpg?sw=341&sh=450&sm=fit",
         platform: "pc, switch",
@@ -31,11 +31,11 @@ export const allProducts =  [
     },
     {
         name: "Watch Dogs: Legion",
-        id: "3",
+        id: "2",
         price: 49.99,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/en_US/dw5ddf69eb/images/large/5cec2d8639798c0870c07699.jpg?sw=341&sh=450&sm=fit",
         platform: "pc",
-        descripton: `Get both the base game and season pass with the Gold Edition. Season pass includes a major expansion with two episodes, extra missions, four iconic heroes with unique abilities, and immediate access to the original Watch Dogs: Complete edition! Recipient of over 65 E3 awards and nominations.
+        description: `Get both the base game and season pass with the Gold Edition. Season pass includes a major expansion with two episodes, extra missions, four iconic heroes with unique abilities, and immediate access to the original Watch Dogs: Complete edition! Recipient of over 65 E3 awards and nominations.
 
         Features
         Build a resistance from anyone in the world as you fight to take back a near-future London facing its downfall.
@@ -45,11 +45,11 @@ export const allProducts =  [
     },
     {
         name: "The Crew 2",
-        id: "4",
+        id: "3",
         price: 10.00,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/en_US/dwfc2ee2a4/images/large/598c6a3e0c8ee469268b4568.jpg?sw=341&sh=450&sm=fit",
         platform: "pc, ps4, xbox one",
-        descripton: `In The Crew® 2, take on the American motorsports scene as you explore and dominate the land, air, and sea of the United States in one of the most exhilarating open worlds ever created. With a wide variety of exotic cars, bikes, boats, and planes to choose from, experience the unbridled thrill and adrenaline-pumping excitement of competing across the entire US as you test your skills in a wide range of driving disciplines. Record every heart-pounding, white-knuckle, asphalt-melting moment and share them with your friends and rivals with the simple push of a button. Fame is yours to take!
+        description: `In The Crew® 2, take on the American motorsports scene as you explore and dominate the land, air, and sea of the United States in one of the most exhilarating open worlds ever created. With a wide variety of exotic cars, bikes, boats, and planes to choose from, experience the unbridled thrill and adrenaline-pumping excitement of competing across the entire US as you test your skills in a wide range of driving disciplines. Record every heart-pounding, white-knuckle, asphalt-melting moment and share them with your friends and rivals with the simple push of a button. Fame is yours to take!
 
         Features
         Jump in the driver’s seat of exotic cars, bikes, planes, and boats as you dominate the land, air, and sea.
@@ -61,11 +61,11 @@ export const allProducts =  [
     },
     {
         name: "Rayman 2: The Great Escape",
-        id: "5",
+        id: "4",
         price: 1.50,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw82131909/images/large/56c4947e88a7e300458b465c.jpg?sw=341&sh=450&sm=fit",
         platform: "pc",
-        descripton: `All rested up from his past adventures, Rayman is ready for action in a new dimension! Ruthless pirates have invaded the Glades of Dreams to capture and enslave Rayman’s friends. Will he save them? Only you can find out! 
+        description: `All rested up from his past adventures, Rayman is ready for action in a new dimension! Ruthless pirates have invaded the Glades of Dreams to capture and enslave Rayman’s friends. Will he save them? Only you can find out! 
 
         To free Rayman’s friends and reap the reward of their magical powers, defeat barbaric pirates and gather the 4 masks of Polokus. 
         
@@ -77,7 +77,7 @@ export const allProducts =  [
     },
     {
         name: "Immortals Fenyx Rising",
-        id: "6",
+        id: "5",
         price: 29.99,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwfe8b320f/images/5cec210a39798c0870c07684.jpg?sw=341&sh=450&sm=fit",
         platform: "pc,ps4,ps5,xbox,switch",
@@ -86,7 +86,7 @@ export const allProducts =  [
     },
     {
         name: "South Park: The Fractured But Whole",
-        id: "7",
+        id: "6",
         price: 12.50,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/en_US/dw4300956b/images/large/56c494ad88a7e300458b4d42.jpg?sw=341&sh=450&sm=fit",
         platform: "pc",
@@ -98,7 +98,7 @@ export const allProducts =  [
     },
     {
         name: "Tom Clancy's Ghost Recon Breakpoint",
-        id: "8",
+        id: "7",
         price: 9.00,
         image: "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw5405924e/images/large/5cc81f5f6b54a4cd3c0e9cfd.jpg?sw=341&sh=450&sm=fit",
         platform: "pc",
