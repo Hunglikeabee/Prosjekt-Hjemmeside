@@ -12,4 +12,5 @@ cartItems.forEach(function(cartElement) {
                                 </div>
                                 `
 });
-totalContainer.innerHTML = `Total: ${total}`;
+const decimalFix = parseFloat(`${total}`).toFixed(2);
+totalContainer.innerHTML = `Total: ${decimalFix}NOK`;

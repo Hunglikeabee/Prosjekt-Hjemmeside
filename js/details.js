@@ -48,5 +48,6 @@ function showCart(cartItems) {
                                 </div>
                               `
     });
-    totalContainer.innerHTML = `Total: ${total}NOK`;
+    const decimalFix = parseFloat(`${total}`).toFixed(2);
+    totalContainer.innerHTML = `Total: ${decimalFix}NOK`;
 };

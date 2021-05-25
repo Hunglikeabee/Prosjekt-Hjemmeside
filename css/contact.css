@@ -9,7 +9,8 @@
 
 .contact-form {
   display: grid;
-  width: 400px;
+  min-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -63,4 +64,10 @@
 
 .contact__information {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+  }
 }
