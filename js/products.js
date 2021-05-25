@@ -39,12 +39,12 @@ function showCart(cartItems) {
     cartItems.forEach(function(cartElement) {
         total += cartElement.price;
 
-        console.log(cartItems)
+        // console.log(cartItems)
 
-        if (cartItems.id.includes(cartElement.id)) {
-            console.log(cartItems)
-            console.log("true")
-        }
+        // if (cartItems.id.includes(cartElement.id)) {
+        //     console.log(cartItems)
+        //     console.log("true")
+        // }
 
         cartList.innerHTML += `
                                 <div class="cart-item">
