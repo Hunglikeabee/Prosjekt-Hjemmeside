@@ -7,6 +7,7 @@
         <title>Game Hub | The Universe of Games</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/shoppingcart.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
                 <!-- Hotjar Tracking Code for https://sleepy-heyrovsky-07d0b1.netlify.app/ -->
         <script>
@@ -23,9 +24,7 @@
     <body>
         <header>
             <section class="header__main">
-                <a class="logo" href="index.html">
-                    <!-- <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page"> -->
-                </a>
+                <a class="logo" aria-label="Game hub logo link main page" href="index.html"></a>
                 <form action="search.html" role="search" class="search__container">
                     <input type="text" class="search__input" placeholder="Search..." alt="Search bar, enter your query">
                     <button aria-label="Search Button" class="search__button" type="submit" value="GO"><i class="fas fa-search"></i></button>
@@ -33,38 +32,111 @@
                 <nav class="nav__main">
                     <ul>
                         <li>
-                            <a href="shoppingcart.html" class="shoppingcart">
+                            <a href="shoppingcart.html" aria-label="Link to shopping cart" class="shoppingcart">
                                 <i style="color:white;" class="fas fa-shopping-cart menuitems"></i>
                             </a>
                         </li>
                         <li>    
-                            <a href="contact.html" class="contact">
+                            <a href="contact.html" aria-label="Link to contact page" class="contact">
                                 <i style="color:white;" class="far fa-envelope menuitems"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="account.html" class="profile">
+                            <a href="account.html" aria-label="Link to account page" class="profile">
                                 <i style="color:white;" class="far fa-user-circle menuitems"></i>
                             </a>
                         </li>    
                     </ul>
                 </nav>
+                <label for="hamburger" class="hamburger__menu" tabindex="0"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="hamburger">
+                <div class="hamburger__dropdown-menu">
+                    <li>
+                        <a href="games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="sellgames.html">Sell Games</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Gadgets</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Collectibles</a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">Shopping cart</a>
+                    </li>
+                    <li>    
+                        <a href="contact.html">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="account.html">Account</a>
+                    </li>   
+                </div>
             </section>
             <section class="header__sub">
                 <nav class="nav__sub">
                     <ul>
-                        <a href="games.html">Games</a>
-                        <a href="sell.html">Sell Games</a>
-                        <a href="clothes.html">Clothes</a>
-                        <a href="gadgets.html">Gadgets</a>
-                        <a href="collectibles.html">Collectibles</a>
+                        <li>
+                            <a href="games.html">Games</a>
+                        </li>
+                        <li>
+                            <a href="sellgames.html">Sell Games</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Clothes</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Gadgets</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Collectibles</a>
+                        </li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main class="cart-page">
-            <div class="cart-list"></div>
-            <div class="total"></div>
+            <div class="checkout-list"></div>
+            <div class="checkout-total"></div>
+            <section>
+                <form class="cart__form">
+                    <div class="cart__form-userinfo">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="cart__form-fullname" placeholder="Full name" required>
+                        <label for="email">E-Mail</label>
+                        <input type="email" name="email" id="cart__form-email" placeholder="E-mail"required>
+                        <label for="phonenumber">Telephone</label>
+                        <input type="tel" name="phonenumber" id="cart__form-phonenumber" placeholder="Phone number">
+                        <label for="zip">Zip</label>
+                        <input type="text" name="zip" id="cart__form-zip" required>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="cart__form-city" placeholder="City" required>
+                    </div>
+                    <div class="cart__form-cardinfo">
+                        <label for="creditcard">Credit card number</label>
+                        <input type="tel" name="creditcard" id="cart__form-creditcard" placeholder="xxxx xxxx xxxx xxxx" maxlength="19" required>
+                        <div class="cart__form-cvcdate">
+                            <div class="cart__form-fixdatecvc">
+                                <label for="expirationyear">Exp year</label>
+                                <input type="text" name="expirationyear" id="cart__form-expirationyear" placeholder="xxxx" maxlength="4" required>
+                            </div>
+                            <div class="cart__form-fixdatecvc">
+                                <label for="expirationdate">Exp date</label>
+                                <input type="tel" name="expirationdate" id="cart__form-expirationdate" placeholder="xx" maxlength="2" required>
+                            </div>
+                            <div class="cart__form-fixdatecvc">
+                                <label for="cvc">CVC</label>
+                                <input type="tel" name="cvc" id="cart__form-cvc" placeholder="xxx" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="checkoutsuccess.html" class="cart__pay-button">Pay</a>
+                </form>
+            </section>
         </main>
         <footer class="footer">
 

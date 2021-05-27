@@ -3,6 +3,9 @@ const gamesContainer = document.querySelector(".games__container");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".cart-total");
+
+const cartQuantity = document.querySelector(".cart-quantity");
+
 let cartArray = [];
 
 
@@ -35,25 +38,28 @@ function showCart(cartItems) {
     cartList.innerHTML = "";
     let total = 0;
 
+    let itemQuantity = 0;
 
+
+
+    
     cartItems.forEach(function(cartElement) {
         total += cartElement.price;
-
-        // console.log(cartItems)
-
-        // if (cartItems.id.includes(cartElement.id)) {
-        //     console.log(cartItems)
-        //     console.log("true")
-        // }
+                    
+        itemQuantity++;
+        console.log(itemQuantity);
+        // cartQuantity.innerHTML = itemQuantity;
 
         cartList.innerHTML += `
-                                <div class="cart-item">
-                                    <a href="details.html?game=${cartElement.id}">
-                                        <h4>${cartElement.name}</h4>
-                                        <div style="background-image: url(${cartElement.image})" class="cart-image"></div>
-                                    </a>
-                                </div>
-                              `
+        <div class="cart-item">
+            <a href="details.html?game=${cartElement.id}">
+                <h4>${cartElement.name}</h4>
+                <div style="background-image: url(${cartElement.image})" class="cart-image"></div>
+            </a>
+        </div>
+        `
+
+
     });
     const decimalFix = parseFloat(`${total}`).toFixed(2);
     totalContainer.innerHTML = `Total: ${decimalFix}NOK`;

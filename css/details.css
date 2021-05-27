@@ -43,57 +43,7 @@
     cursor: pointer;
   }
 
-/*Shoppingcart list*/
 
-.cart {
-    position: fixed;
-    border: 2px solid var(--green);
-    background-color: var(--white);
-    color: black;
-    max-width: 200px;
-    min-width: 200px;
-    max-height: 600px;
-    margin: auto;
-    right: 10px;
-    bottom: 10px;
-    display: none;
-    overflow-y: scroll;
-    overflow-x: hidden
-  }
-  
-  .cart-item {
-    margin: 30px 10px;
-  }
-  
-  .cart-item h4 {
-    font-size: 12px;
-    color: black;
-  }
-  
-  .cart-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-size: cover;
-  }
-  
-  .cart-total {
-  
-  }
-  
-  .cart-total {
-    margin: 10px 0px;
-  }
-  
-  .cart-button {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    display: grid;
-    text-align: center;
-    background-color: var(--green);
-    color: black;
-  }
 
 
 

@@ -1,50 +1,8 @@
-.overlay__whitebox {
-  z-index: 92993;
-  position: fixed;
-  max-width: 80%;
-  max-height: 80%;
-  width: 450px;
-  height: 600px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: var(--borderradius1);
-  background-color: white;
-  box-shadow: 0px 5px 4px 0px black;
-  display: grid;
-  grid-template-rows: 1fr 1fr 4fr;
+.checkout-message {
+  margin: 100px auto;
+  max-width: 400px;
 }
 
-.h2 {
-  text-align: center;
-}
-
-.overlay__whitebox img {
-  width: 100%;
-  max-height: auto;
-}
-
-.logoheader {
-  background-color: black;
-  border-radius: 10px 10px 0px 0px;
-  height: 80px;
-}
-
-.logoheader img {
-  width: auto;
-  max-height: 100%;
-  margin-top: 0%;
-  height: 60px;
-}
-
-.overlay__whitebox h1 {
-  text-align: center;
-}
-
-.overlay__whitebox h2 {
-  text-align: center;
-}
-
-.overlay__whitebox p {
-  margin: 0% 20% 40% 20%;
+.checkout-message h1, h2 {
+  margin: 20px;
 }

@@ -4,12 +4,13 @@
     --orange: #ffbb10;
     --blue: #3cabff;
     --gray: #414141;
+    --deeppurple: #2c162a;
     --red: #f13d3d;
     --green: #4ee641;
 
-    --fontdefault: Roboto, Arial, Helvetica, sans-serif;
-    --font1: "Britanic", Arial, Helvetica, sans-serif;
-    --font2: "Perfectdark", Arial, Helvetica, sans-serif;
+    --fontdefault: 'Open Sans', Helvetica, sans-serif;
+    --font1: "Britanic", Helvetica, sans-serif;
+    --font2: "Perfectdark", Helvetica, sans-serif;
 
-    --borderradius1: 0px;
+    --borderradius1: 2px;
 }

@@ -2,7 +2,7 @@ const fullName = document.querySelector("#contact__form-fullname");
 const phoneNumber = document.querySelector("#contact__form-phonenumber");
 const email = document.querySelector("#contact__form-email");
 const textArea = document.querySelector("#contact__form-textarea");
-const form = document.querySelector("#contact-form");
+const form = document.querySelector("#contact__form");
 const button = document.querySelector(".contact__form-button");
 const message = document.querySelector(".contact__form-message");
 

@@ -6,8 +6,8 @@
         <meta name="description" content="Buy and Sell games easy, fast and cheap">
         <title>Game Hub | The Universe of Games</title>
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/409a57b09b.js" crossorigin="anonymous"></script>
                 <!-- Hotjar Tracking Code for https://sleepy-heyrovsky-07d0b1.netlify.app/ -->
         <script>
@@ -24,9 +24,7 @@
     <body>
         <header>
             <section class="header__main">
-                <a class="logo" href="index.html">
-                    <!-- <img src="images/logo.png" class="logo" alt="Logo for Game Hub home page"> -->
-                </a>
+                <a class="logo" aria-label="Game hub logo link main page" href="index.html"></a>
                 <form action="search.html" role="search" class="search__container">
                     <input type="text" class="search__input" placeholder="Search..." alt="Search bar, enter your query">
                     <button aria-label="Search Button" class="search__button" type="submit" value="GO"><i class="fas fa-search"></i></button>
@@ -34,49 +32,87 @@
                 <nav class="nav__main">
                     <ul>
                         <li>
-                            <a href="shoppingcart.html" class="shoppingcart">
+                            <a href="shoppingcart.html" aria-label="Link to shopping cart" class="shoppingcart">
                                 <i style="color:white;" class="fas fa-shopping-cart menuitems"></i>
                             </a>
                         </li>
                         <li>    
-                            <a href="contact.html" class="contact">
+                            <a href="contact.html" aria-label="Link to contact page" class="contact">
                                 <i style="color:white;" class="far fa-envelope menuitems"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="account.html" class="profile">
+                            <a href="account.html" aria-label="Link to account page" class="profile">
                                 <i style="color:white;" class="far fa-user-circle menuitems"></i>
                             </a>
                         </li>    
                     </ul>
                 </nav>
+                <label for="hamburger" class="hamburger__menu" tabindex="0"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="hamburger">
+                <div class="hamburger__dropdown-menu">
+                    <li>
+                        <a href="games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="sellgames.html">Sell Games</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Gadgets</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Collectibles</a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">Shopping cart</a>
+                    </li>
+                    <li>    
+                        <a href="contact.html">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="account.html">Account</a>
+                    </li>   
+                </div>
             </section>
             <section class="header__sub">
                 <nav class="nav__sub">
                     <ul>
-                        <a href="games.html">Games</a>
-                        <a href="sell.html">Sell Games</a>
-                        <a href="clothes.html">Clothes</a>
-                        <a href="gadgets.html">Gadgets</a>
-                        <a href="collectibles.html">Collectibles</a>
+                        <li>
+                            <a href="games.html">Games</a>
+                        </li>
+                        <li>
+                            <a href="sellgames.html">Sell Games</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Clothes</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Gadgets</a>
+                        </li>
+                        <li>
+                            <a href="games.html">Collectibles</a>
+                        </li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main>
             <section class="contact__container">
-                <form method="POST" class="contact-form" id="contact-form">
+                <form class="contact__form" id="contact__form">
                     <h1>Send us a message</h1>
                     <label for="fullname">Name</label>
-                    <input type="text" name="fullname" id="contact__form-fullname" required>
+                    <input type="text" name="fullname" aria-label="Full name" id="contact__form-fullname" required>
                     <p class="fullname-error">Name is too short</p>
                     <label for="phonenumber">Phone Number</label>
-                    <input type="tel" name="phonenumber" id="contact__form-phonenumber">
+                    <input type="tel" name="phonenumber" aria-label="Phone number" id="contact__form-phonenumber">
                     <p class="phonenumber-error">Invalid number</p>
                     <label for="email">E-Mail</label>
-                    <input type="email" name="email" id="contact__form-email">
+                    <input type="email" name="email" aria-label="Email address" id="contact__form-email">
                     <p class="email-error">Invalid e-mail address</p>
-                    <textarea name="textarea" id="contact__form-textarea" cols="30" rows="10" maxlength="200"></textarea>
+                    <textarea name="textarea" aria-label="Text area, type here" id="contact__form-textarea" cols="30" rows="10" maxlength="200"></textarea>
                     <p class="textarea-error"></p>
                     <div class="contact__form-message"></div>
                     <button disabled class="contact__form-button">Send</button>

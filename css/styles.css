@@ -20,6 +20,10 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, p {
     margin: 0;
 }
@@ -97,6 +101,51 @@ header {
   font-size: 20px;
 }
 
+
+
+
+/* Hamburger menu */
+
+.hamburger__menu {
+  display: none;
+}
+
+.hamburger__dropdown-menu {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+.hamburger__menu {
+  grid-area: hamburger-menu;
+  align-self: center;
+  justify-content: end;
+  margin-right: 30px;
+  font-size: 26px;
+}
+
+.hamburger__dropdown-menu {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--gray);
+}
+
+.hamburger__dropdown-menu li {
+  padding: 8px 20px;
+  text-align: end;
+}
+
+.hamburger__dropdown-menu li:nth-child(odd) {
+  background-color: var(--black);
+}
+
+
 /* Bottom part of the navigation*/
 
 .header__sub {
@@ -127,15 +176,82 @@ header {
   align-items: center;
 }
 
-.nav__sub a:nth-child(odd) {
-  background-color: var(--orange);
+.nav__sub li:nth-child(odd) {
+  background-color: var(--black);
+  
+}
+
+li a:nth-child(odd) {
+  color: var(--orange);
+}
+
+
+
+/* Shoppingcart */
+
+.cart {
+  position: fixed;
+  border: 2px solid var(--green);
+  background-color: var(--white);
+  color: black;
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 600px;
+  margin: auto;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden
+}
+
+.cart-item {
+  margin: 30px 10px;
+}
+
+.cart-item h4 {
+  font-size: 12px;
   color: black;
 }
+
+.cart-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.cart-quantity {
+  color: black;
+  
+}
+
+.cart-total {
+  background-color: var(--blue);
+  font-weight: bold;
+  margin: 0;
+}
+
+.cart-button {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: grid;
+  text-align: center;
+  background-color: var(--green);
+  color: black;
+}
+
+
+
+
+/* Media Queries */
 
 @media only screen and (max-width: 650px) {
 
   .logo {
     grid-area: thelogo;
+    height: 50px;
   }
 
   .search__container {
@@ -143,27 +259,29 @@ header {
     margin: 0px 10px;
   }
 
-  .nav__main {
-    grid-area: thenav;
+  .hamburger__menu {
+    display: grid;
   }
+
+  #hamburger:checked ~ .hamburger__dropdown-menu {
+    display: block;
+  }
+
+
 
   .header__main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "thelogo thenav"
+    "thelogo hamburger-menu"
     "thesearchbar thesearchbar";
   }
 
-  .logo {
-    min-width: 100px;
+  .nav__main {
+    display:none;
   }
 
-  .nav__main ul {
-    padding: 0px;
-  }
-
-  .nav__sub ul {
-    grid-template-columns: repeat(2, 1fr);
+  .header__sub {
+    display: none;
   }
 }

@@ -1,14 +1,14 @@
 const cartItems = JSON.parse(localStorage.getItem("cartList"))
-const cartContainer = document.querySelector(".cart-list");
-const totalContainer = document.querySelector(".total");
+const cartContainer = document.querySelector(".checkout-list");
+const totalContainer = document.querySelector(".checkout-total");
 
 let total = 0;
 cartItems.forEach(function(cartElement) {
     total += cartElement.price;
-    cartContainer.innerHTML += `<div class="cart-item">
-                                    <h4>${cartElement.name}</h4>
-                                    <div style="background-image: url(${cartElement.image})" class="cart-image"></div>
-                                    <div class="product-price">${cartElement.price} NOK</div>
+    cartContainer.innerHTML += `<div class="checkout-item">
+                                    <div style="background-image: url(${cartElement.image})" class="checkout-image"></div>
+                                    <h4 class="checkout-name">${cartElement.name}</h4>
+                                    <div class="checkout-price">${cartElement.price} NOK</div>
                                 </div>
                                 `
 });
