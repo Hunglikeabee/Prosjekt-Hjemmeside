@@ -1,28 +1,29 @@
 .form__sell-games {
-    display: grid;
-    max-width: 300px;
-    margin: 60px auto;
+  display: grid;
+  max-width: 300px;
+  margin: 60px auto;
 }
 
-.form__sell-games select,textarea, input{
-    border: none;
-    height: 25px;
-    border-radius: var(--borderradius1);
-    margin: 5px;
+.form__sell-games select,
+textarea {
+  border: none;
+  height: 25px;
+  border-radius: var(--borderradius1);
+  margin: 5px;
 }
 
 #form__sell-textarea {
-    resize: none;
-    height: 100px;
+  resize: none;
+  height: 100px;
 }
 
 .form__sell-button {
-    text-decoration: none;
-    background-color: var(--green);
-    border-radius: var(--borderradius1);
-    width: 80px;
-    text-align: center;
-    color: black;
-    padding: 5px;
-    margin: 40px auto;
+  text-decoration: none;
+  background-color: var(--green);
+  border-radius: var(--borderradius1);
+  width: 80px;
+  text-align: center;
+  color: black;
+  padding: 5px;
+  margin: 40px auto;
 }

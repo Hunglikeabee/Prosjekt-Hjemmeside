@@ -12,7 +12,6 @@
 
 /*General settings body */
 
-
 body {
   font-family: var(--fontdefault);
   background-color: var(--black);
@@ -25,8 +24,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 li {
@@ -102,9 +105,6 @@ header {
   font-size: 20px;
 }
 
-
-
-
 /* Hamburger menu */
 
 .hamburger__menu {
@@ -146,12 +146,11 @@ header {
   background-color: var(--black);
 }
 
-
 /* Bottom part of the navigation*/
 
 .header__sub {
-    background-color: var(--gray);
-  }  
+  background-color: var(--black);
+}
 
 .nav__sub {
   max-width: 1000px;
@@ -178,15 +177,12 @@ header {
 }
 
 .nav__sub li:nth-child(odd) {
-  background-color: var(--black);
-  
+  background-color: var(--gray);
 }
 
-li a:nth-child(odd) {
+.nav__sub a {
   color: var(--orange);
 }
-
-
 
 /* Shoppingcart */
 
@@ -203,7 +199,7 @@ li a:nth-child(odd) {
   bottom: 10px;
   display: none;
   overflow-y: scroll;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .cart-item {
@@ -224,7 +220,6 @@ li a:nth-child(odd) {
 
 .cart-quantity {
   color: black;
-  
 }
 
 .cart-total {
@@ -243,7 +238,6 @@ li a:nth-child(odd) {
   color: black;
 }
 
-
 /* Footer */
 
 footer {
@@ -256,7 +250,8 @@ footer h3 {
   font-size: 18px;
 }
 
-footer a, p {
+footer a,
+p {
   font-size: 14px;
 }
 
@@ -320,7 +315,6 @@ footer a, p {
 /* Media Queries */
 
 @media only screen and (max-width: 650px) {
-
   .logo {
     grid-area: thelogo;
     height: 50px;
@@ -339,37 +333,31 @@ footer a, p {
     display: block;
   }
 
-
-
   .header__main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "thelogo hamburger-menu"
-    "thesearchbar thesearchbar";
+    grid-template-areas:
+      "thelogo hamburger-menu"
+      "thesearchbar thesearchbar";
   }
 
   .nav__main {
-    display:none;
+    display: none;
   }
 
   .header__sub {
     display: none;
   }
 
-
   @media only screen and (max-width: 900px) {
     .footer__container {
       grid-template-columns: 1fr 1fr;
     }
-
   }
-  
+
   @media only screen and (max-width: 500px) {
     .footer__container {
       grid-template-columns: 1fr;
     }
   }
-
-
 }
