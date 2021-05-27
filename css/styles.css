@@ -12,6 +12,7 @@
 
 /*General settings body */
 
+
 body {
   font-family: var(--fontdefault);
   background-color: var(--black);
@@ -243,8 +244,79 @@ li a:nth-child(odd) {
 }
 
 
+/* Footer */
 
+footer {
+  background: black;
+  margin-top: 100px;
+}
 
+footer h3 {
+  color: var(--blue);
+  font-size: 18px;
+}
+
+footer a, p {
+  font-size: 14px;
+}
+
+.footer__container {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: var(--white);
+}
+
+.footer__divspaces--margin {
+  margin-bottom: 40px;
+}
+
+.footer__contact a {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--fontdefault);
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+.fab,
+.fas,
+.far {
+  font-size: 18px;
+}
+
+.socialmedia .fab {
+  color: white;
+}
+
+.footer__openhours-text div {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__openhours-text p {
+  margin: 0 0 4px 0;
+}
+
+.copyright {
+  text-align: center;
+  font-family: var(--fontdefault);
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 0;
+  background: black;
+  color: white;
+  width: 100%;
+}
 /* Media Queries */
 
 @media only screen and (max-width: 650px) {
@@ -284,4 +356,20 @@ li a:nth-child(odd) {
   .header__sub {
     display: none;
   }
+
+
+  @media only screen and (max-width: 900px) {
+    .footer__container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .footer__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
 }

@@ -47,8 +47,7 @@ function showCart(cartItems) {
         total += cartElement.price;
                     
         itemQuantity++;
-        console.log(itemQuantity);
-        // cartQuantity.innerHTML = itemQuantity;
+        cartQuantity.innerHTML = "Total items: " + itemQuantity;
 
         cartList.innerHTML += `
         <div class="cart-item">
