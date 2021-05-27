@@ -146,6 +146,10 @@ header {
   background-color: var(--black);
 }
 
+.hamburger__dropdown-menu a {
+  color: var(--orange);
+}
+
 /* Bottom part of the navigation*/
 
 .header__sub {
