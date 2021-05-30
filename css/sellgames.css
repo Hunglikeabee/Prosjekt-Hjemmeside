@@ -21,6 +21,7 @@ textarea {
   text-decoration: none;
   background-color: var(--green);
   border-radius: var(--borderradius1);
+  font-weight: bold;
   width: 80px;
   text-align: center;
   color: black;

@@ -15,7 +15,8 @@
   font-size: 13px;
 }
 
-.contact__form label {
+.contact__form h1 {
+  margin-bottom: 20px;
 }
 
 .contact__form input {
@@ -70,6 +71,13 @@
 .contact__information {
   margin: 0 auto;
   font-size: 13px;
+}
+
+.contact__information a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 800px) {

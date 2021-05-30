@@ -26,6 +26,7 @@
   width: 100px;
   height: 135px;
   background-repeat: no-repeat;
+  background-size: cover;
   background-size: 100px 135px;
 }
 
@@ -94,6 +95,8 @@
   text-decoration: none;
   background-color: var(--green);
   border-radius: var(--borderradius1);
+  border: none;
+  font-weight: bold;
   width: 80px;
   text-align: center;
   color: black;
