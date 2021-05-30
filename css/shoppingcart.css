@@ -43,9 +43,11 @@
 .checkout-total {
   text-align: center;
   background-color: var(--gray);
-  min-width: 200px;
   border-radius: var(--borderradius1);
-  margin: 0 auto;
+  width: 200px;
+  margin: 10px auto;
+  padding: 5px;
+  font-weight: bold;
 }
 
 /* Checkout form */
