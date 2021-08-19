@@ -13,7 +13,7 @@ const urlApi = `http://hunglikeabee.one/CMS-CA/wp-json/wc/store/products`
 
 async function getRestApi() {
     try {
-        const getData = await fetch(urlApi);
+        const getData = await fetch("https://noroffcors.herokuapp.com/" + urlApi);
         const result = await getData.json();
         console.log(result);
 
