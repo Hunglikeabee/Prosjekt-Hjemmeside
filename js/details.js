@@ -1,4 +1,4 @@
-import { allProducts } from "./products/productList.js";
+// import { allProducts } from "./products/productList.js";
 const gameDetails  = document.querySelector(".game-details");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cart-list");
@@ -13,14 +13,46 @@ if (game === null) {
     location.href = "/index.html";
 };
 
-document.title = `${allProducts[game].name}`
+const urlApi = `http://hunglikeabee.one/CMS-CA/wp-json/wc/store/products`
 
-gameDetails.innerHTML = `<h2>${allProducts[game].name}</h2>
-                         <div style="background-image: url(${allProducts[game].image})" class="product-image"></div>
-                         <p>${allProducts[game].description}</p>
-                         <div class="product-price">${allProducts[game].price} NOK</div>
-                        <button class="product-button" data-product="${allProducts[game].id}">Add to cart</button>
-                        `
+async function getRestApi() {
+    try {
+        const getData = await fetch(urlApi);
+        const result = await getData.json();
+        console.log(result)
+        
+        for (let i = 0; i < result.length; i++) {
+            console.log(result[i].id)
+            if (result[i].id == game) {
+                document.title = `${result[i].name}`
+                
+
+                gameDetails.innerHTML = `<h2>${result[i].name}</h2>
+                                        <div style="background-image: url(${result[i].images[0].src})" class="product-image"></div>
+                                        ${result[i].description}
+                                        <div class="product-price">${result[i].prices.price} NOK</div>
+                                        <button class="product-button" data-product="${result[i].id}">Add to cart</button>
+                                        `
+            }
+        }
+    
+
+ 
+        // document.title = `${data.name}`
+
+//   gameDetails.innerHTML = `<h2>${allProducts[game].name}</h2>
+//                          <div style="background-image: url(${allProducts[game].image})" class="product-image"></div>
+//                          <p>${allProducts[game].description}</p>
+//                          <div class="product-price">${allProducts[game].price} NOK</div>
+//                         <button class="product-button" data-product="${allProducts[game].id}">Add to cart</button>
+//                         `
+    }
+    catch(error) {
+        console.log(error);
+    }
+}
+
+getRestApi();
 
 
 const buttons = document.querySelectorAll("button");

@@ -73,7 +73,7 @@ export const allProducts =  [
         
         The matchless French 2D platformer goes 3D in its astounding sequel
         Amazing and well-polished gameplay mechanics assure a smooth and enjoyable experience throughout the entire game
-        One of the few really good platformers on the PC with diverse levels, colorful graphics, and catchy music`
+        One of the few really good platformers on the PC with diverse levels, colorful graphics, and catchy music.`
     },
     {
         name: "Immortals Fenyx Rising",
