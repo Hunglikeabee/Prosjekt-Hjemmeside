@@ -29,7 +29,7 @@ async function getRestApi() {
 
                 gameDetails.innerHTML = `<h2>${result[i].name}</h2>
                                         <div style="background-image: url(${result[i].images[0].src})" class="product-image"></div>
-                                        ${result[i].description}
+                                        <div class="product-text>${result[i].description}</div>
                                         <div class="product-price">${result[i].prices.price} NOK</div>
                                         <button class="product-button" data-product="${result[i].id}">Add to cart</button>
                                         `

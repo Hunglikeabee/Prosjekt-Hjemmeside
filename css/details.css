@@ -19,7 +19,7 @@
     background-size: contain
 }
 
-.game-details p {
+.game-details product-text {
     max-width: 500px;
     margin: 10px auto;
     font-size: 14px;
