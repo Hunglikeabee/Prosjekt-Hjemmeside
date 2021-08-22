@@ -5,6 +5,11 @@ a{
   color: white;
 }
 
+.selection-button {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
 .games__container {
   max-width: 800px;
   margin: 50px auto;
