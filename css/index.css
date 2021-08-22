@@ -6,8 +6,15 @@ a{
 }
 
 .selection-button {
+  display: block;
   max-width: 800px;
   margin: 20px auto;
+  padding-left: 20px;
+}
+
+#sortby {
+  border-radius: var(--borderradius1);
+  border-style: none;
 }
 
 .games__container {
